@@ -1,0 +1,11 @@
+import re
+special = re.compile(r'[^A-ZAa-z0-9]+')
+f = open ("sample.txt", "r+")
+f1 = f.readline()
+
+for i in range(len(f1)):
+  if (re.match(special,f1[i])):
+      print()
+      print(f1[i])
+  else:
+      print(f1[i], end ="")
